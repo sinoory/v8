@@ -663,8 +663,6 @@
         '../../src/hydrogen-types.h',
         '../../src/hydrogen-uint32-analysis.cc',
         '../../src/hydrogen-uint32-analysis.h',
-        '../../src/i18n.cc',
-        '../../src/i18n.h',
         '../../src/icu_util.cc',
         '../../src/icu_util.h',
         '../../src/ic/access-compiler.cc',
@@ -770,7 +768,6 @@
         '../../src/runtime/runtime-debug.cc',
         '../../src/runtime/runtime-function.cc',
         '../../src/runtime/runtime-generator.cc',
-        '../../src/runtime/runtime-i18n.cc',
         '../../src/runtime/runtime-internal.cc',
         '../../src/runtime/runtime-json.cc',
         '../../src/runtime/runtime-literals.cc',
@@ -1196,19 +1193,10 @@
           ]
         }],
         ['v8_enable_i18n_support==1', {
-          'dependencies': [
-            '<(icu_gyp_path):icui18n',
-            '<(icu_gyp_path):icuuc',
-          ]
         }, {  # v8_enable_i18n_support==0
           'sources!': [
             '../../src/i18n.cc',
             '../../src/i18n.h',
-          ],
-        }],
-        ['OS=="win" and v8_enable_i18n_support==1', {
-          'dependencies': [
-            '<(icu_gyp_path):icudata',
           ],
         }],
         ['icu_use_data_file_flag==1', {
@@ -1728,12 +1716,6 @@
         '../../src/mksnapshot.cc',
       ],
       'conditions': [
-        ['v8_enable_i18n_support==1', {
-          'dependencies': [
-            '<(icu_gyp_path):icui18n',
-            '<(icu_gyp_path):icuuc',
-          ]
-        }],
         ['want_separate_host_toolset==1', {
           'toolsets': ['host'],
         }, {

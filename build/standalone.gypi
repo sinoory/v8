@@ -37,7 +37,7 @@
     'tsan%': 0,
     'visibility%': 'hidden',
     'v8_enable_backtrace%': 0,
-    'v8_enable_i18n_support%': 1,
+    'v8_enable_i18n_support%': 0,
     'v8_deprecation_warnings': 1,
     'msvs_multi_core_compile%': '1',
     'mac_deployment_target%': '10.5',
@@ -92,7 +92,6 @@
     'v8_optimized_debug%': 0,
 
     # Relative path to icu.gyp from this file.
-    'icu_gyp_path': '../third_party/icu/icu.gyp',
 
     'conditions': [
       ['(v8_target_arch=="arm" and host_arch!="arm") or \

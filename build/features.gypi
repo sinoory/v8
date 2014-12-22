@@ -56,7 +56,8 @@
 
     # Enable ECMAScript Internationalization API. Enabling this feature will
     # add a dependency on the ICU library.
-    'v8_enable_i18n_support%': 1,
+    # disable lang tag such as <html lang='ch-zn'>,as need thirdpaty/icu support
+    'v8_enable_i18n_support%': 0,
 
     # Enable compiler warnings when using V8_DEPRECATED apis.
     'v8_deprecation_warnings%': 0,
