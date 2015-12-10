@@ -277,7 +277,7 @@ int RunMain(v8::Isolate* isolate, int argc, char* argv[]) {
           v8::String::NewFromUtf8(isolate, "unnamed");
       v8::Handle<v8::String> source =
           v8::String::NewFromUtf8(isolate, argv[++i]);
-      if (!ExecuteString(isolate, source, file_name, false, true)) return 1;
+      if (!ExecuteString(isolate, source, file_name, true, true)) return 1;
     } else {
       // Use all other arguments as names of files to load and run.
       v8::Handle<v8::String> file_name = v8::String::NewFromUtf8(isolate, str);

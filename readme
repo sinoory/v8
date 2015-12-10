@@ -1,0 +1,6 @@
+export GYP_GENERATORS=ninja
+build/gyp_v8
+ninja -C out/Debug d8
+
+build/gyp_v8 samples/samples.gyp
+ninja -C out/Debug process
